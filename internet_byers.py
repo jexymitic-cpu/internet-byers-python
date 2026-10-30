@@ -27,8 +27,15 @@ if broj_kupovina >= 20:
     print("Cest kupac")
 else:
     print("Kupac nema 20 kupovina")
-
 if ukupno > 100000 and broj_kupovina > 10:
-    print("VIP kupac")
+   status = "VIP"
+   print("VIP kupac")
 else:
-    print("Standard kupac")
+    status = "STANDARD"
+    print("STANDARD kupac")
+if status == "VIP":
+    popust = 0.10
+else:
+    popust = 0.05
+cena_konacna=ukupno-(ukupno * popust)
+print("Konacna cena:",cena_konacna)
